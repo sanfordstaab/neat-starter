@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
-  // Copy notes.html to route of /_site
+  // Copy notes.html
   eleventyConfig.addPassthroughCopy(".src/static/notes.html");
 
   // Minify HTML

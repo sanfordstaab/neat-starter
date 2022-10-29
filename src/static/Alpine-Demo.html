@@ -1,0 +1,63 @@
+<html>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+  <hr>
+
+  <div x-data="{ v1: 0,  v2: 1}">
+    Value 1:<span x-text="v1"></span>
+    <br>
+    Value 2:<span x-text="v2"></span>
+    <button @click="v1++">Increment Value 1</button>
+    <button @click="v1--">Decrement Value 1</button>        
+    <button @click="v2++">Increment Value 2</button>
+    <button @click="v2--">Decrement Value 2</button>     
+    <button @click="v2 = v1 + v2">Add -> Value 2</button>
+    <button @click="v2 = v1 - v2">Subtract -> Value 2</button>
+    <button @click="v2 = v1 * v2">Multiply -> Value 2</button>
+    <button @click="v2 = v1 / v2">Divide -> Value 2</button>
+    <button @click="let t = v1; v1 = v2; v2 = t">Swap</button>
+  </div>
+  <hr>
+
+  <div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle</button>
+
+    <span 
+      x-show="open"
+      x-transition:enter="transition ease-out duration-1000"
+      x-transition:enter-start="opacity-0 scale-50"
+      x-transition:enter-end="opacity-100 scale-100"
+      x-transition:leave="transition ease-in duration-1000"
+      x-transition:leave-start="opacity-100 scale-100"
+      x-transition:leave-end="opacity-0 scale-50">
+        Hello 👋
+    </span>
+</div>
+<hr>
+
+<div
+    x-data="{
+        search: '', 
+        items: ['foo', 'bar', 'baz', 'jazz', 'pizaz', 'short', 'fort', 'toot', 'loot', 'barrier', 'lazy'],
+        get filteredItems() {
+            return this.items.filter(
+                i => i.includes(this.search)
+            )
+        }
+    }"
+>
+    <input x-model="search" placeholder="Search...">
+    <ul>
+        <template x-for="item in filteredItems" :key="item">
+            <li x-text="item"></li>
+        </template>
+    </ul>
+</div>
+<hr>
+
+
+</body>
+</html>
