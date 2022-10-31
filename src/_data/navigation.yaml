@@ -2,8 +2,8 @@
 items:
   - text: Notes
     url: "/static/notes/index.html"
-  - text: Menu Two
-    url: "#"
+  - text: Alpine Demo
+    url: "/Alpine-Demo/index.html"
   - text: Menu Three
     url: "#"
   - text: Blog
