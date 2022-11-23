@@ -1,0 +1,10 @@
+<div>
+  <h2>Diagnostics</h2>  
+  {% for page in collections.all %}
+  <i><b>{{ page.data.title }}</b></i><br>
+  {% for key, value in page.data %}
+  <b>{{ key }}</b>, {{ value }}<br>
+  {% endfor %}
+  <hr>
+  {% endfor %}
+</div>
