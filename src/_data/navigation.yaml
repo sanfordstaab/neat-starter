@@ -4,7 +4,7 @@ items:
     url: "/pages/notes/index.html"
   - text: Alpine Demo
     url: "/static/Alpine-Demo/index.html"
-  - text: Menu Three
-    url: "/pages/2022-11/21-my-first-page/index.html"
+  - text: Markup Reference
+    url: "/pages/2022-11-21-markdown-ref/index.html"
   - text: Blog
     url: "/blog"

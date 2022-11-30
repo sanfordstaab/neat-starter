@@ -9,7 +9,19 @@ h1 {
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-lg font-bold ml-4;
+}
+
+a {
+  @apply ml-8 underline text-indigo-600 hover:text-red-600 cursor-pointer 
+}
+
+.code {
+  @apply font-mono font-semibold
+}
+
+p {
+  @apply ml-8
 }
 
 /* Syntax Highlighting*/
